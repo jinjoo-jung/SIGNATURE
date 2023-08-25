@@ -574,26 +574,28 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"gLLPy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _app = require("./App");
+var _appDefault = parcelHelpers.interopDefault(_app);
+var _routes = require("./routes");
+var _routesDefault = parcelHelpers.interopDefault(_routes);
 const root = document.querySelector("#root");
-root.append(new (0, _app.App)().el);
+root.append(new (0, _appDefault.default)().el);
 
-},{"./App":"2kQhy"}],"2kQhy":[function(require,module,exports) {
+},{"./App":"2kQhy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./routes":"3L9mC"}],"2kQhy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "App", ()=>App);
 var _heropyJs = require("./core/heropy.js");
+var _theHeaderJs = require("./components/TheHeader.js");
+var _theHeaderJsDefault = parcelHelpers.interopDefault(_theHeaderJs);
 class App extends (0, _heropyJs.Component) {
     render() {
-        this.el.classList.add("search");
-        this.el.innerHTML = /* html */ `
-    <input />
-    <button>Click!<button/>
-    `;
+        this.el.append(new (0, _theHeaderJsDefault.default)().el);
     }
 }
+exports.default = App;
 
-},{"./core/heropy.js":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"57bZf":[function(require,module,exports) {
+},{"./core/heropy.js":"57bZf","./components/TheHeader.js":"3Cyq4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"57bZf":[function(require,module,exports) {
 /////// Component /////
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -638,6 +640,27 @@ exports.export = function(dest, destName, get) {
         get: get
     });
 };
+
+},{}],"3Cyq4":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _heropy = require("../core/heropy");
+class TheHeader extends (0, _heropy.Component) {
+    constructor(){
+        super({
+            tagName: "header"
+        });
+    }
+    render() {
+        this.el.innerHTML = /*html*/ `
+        <a href = "#">Main!</a>
+        <a href = "#/abouy">Abount!</a>
+            `;
+    }
+}
+exports.default = TheHeader;
+
+},{"../core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3L9mC":[function(require,module,exports) {
 
 },{}]},["f3BSW","gLLPy"], "gLLPy", "parcelRequireec0d")
 

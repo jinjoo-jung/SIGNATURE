@@ -1,11 +1,8 @@
 import { Component } from "./core/heropy.js";
+import TheHeader from "./components/TheHeader.js";
 
-export class App extends Component {
+export default class App extends Component {
   render() {
-    this.el.classList.add("search");
-    this.el.innerHTML = /* html */ `
-    <input />
-    <button>Click!<button/>
-    `;
+    this.el.append(new TheHeader().el);
   }
 }
