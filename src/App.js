@@ -1,14 +1,11 @@
-// export default class App {
-//   constructor() {
-//     this.el = document.createElement("div");
-//     this.el.textContent = "Hello, world!";
-//   }
-// }
+import { Component } from "./core/heropy.js";
 
-import { Component } from "./core/heropy";
-
-export default class App extends Component {
+export class App extends Component {
   render() {
-    this.el.textContent = "Hello, world!";
+    this.el.classList.add("search");
+    this.el.innerHTML = /* html */ `
+    <input />
+    <button>Click!<button/>
+    `;
   }
 }

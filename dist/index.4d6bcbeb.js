@@ -574,30 +574,26 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"gLLPy":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _appJs = require("./App.js");
-var _appJsDefault = parcelHelpers.interopDefault(_appJs);
+var _app = require("./App");
 const root = document.querySelector("#root");
-root.append(new (0, _appJsDefault.default)().el);
+root.append(new (0, _app.App)().el);
 
-},{"./App.js":"2kQhy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2kQhy":[function(require,module,exports) {
-// export default class App {
-//   constructor() {
-//     this.el = document.createElement("div");
-//     this.el.textContent = "Hello, world!";
-//   }
-// }
+},{"./App":"2kQhy"}],"2kQhy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _heropy = require("./core/heropy");
-class App extends (0, _heropy.Component) {
+parcelHelpers.export(exports, "App", ()=>App);
+var _heropyJs = require("./core/heropy.js");
+class App extends (0, _heropyJs.Component) {
     render() {
-        this.el.textContent = "Hello, world!";
+        this.el.classList.add("search");
+        this.el.innerHTML = /* html */ `
+    <input />
+    <button>Click!<button/>
+    `;
     }
 }
-exports.default = App;
 
-},{"./core/heropy":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"57bZf":[function(require,module,exports) {
+},{"./core/heropy.js":"57bZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"57bZf":[function(require,module,exports) {
 /////// Component /////
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
