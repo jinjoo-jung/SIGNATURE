@@ -9,7 +9,7 @@ export default class TheHeader extends Component {
   render() {
     this.el.innerHTML = /*html*/ `
         <a href = "#">Main!</a>
-        <a href = "#/abouy">Abount!</a>
+        <a href = "#/about">Abount!</a>
             `;
   }
 }
